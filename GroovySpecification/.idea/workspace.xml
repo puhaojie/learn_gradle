@@ -16,17 +16,17 @@
         <entry file="file://$PROJECT_DIR$/src/variable/stringstudy.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1161">
-              <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clouserstudy.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clouserstudy.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/variable/clouserstudy.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
-              <caret line="139" column="1" lean-forward="true" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
+              <caret line="139" column="1" lean-forward="false" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
               <folding>
                 <element signature="e#151#211#0" expanded="false" />
                 <element signature="e#267#288#0" expanded="false" />
@@ -34,6 +34,46 @@
                 <element signature="n#!!block;n#fab2#0" expanded="false" />
                 <element signature="n#!!block;n#fab3#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datastructurestudy.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/datastruct/datastructurestudy.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mapstructstudy.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/datastruct/mapstructstudy.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rangestudy.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/datastruct/rangestudy.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="810">
+              <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="List.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="599" column="6" lean-forward="false" selection-start-line="599" selection-start-column="6" selection-end-line="599" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,12 +98,17 @@
         <option value="$PROJECT_DIR$/src/variable/stringstudy.groovy" />
         <option value="$PROJECT_DIR$/src/variable/structstudy.groovy" />
         <option value="$PROJECT_DIR$/src/variable/clouserstudy.groovy" />
+        <option value="$PROJECT_DIR$/src/variable/datastructurestudy.groovy" />
+        <option value="$PROJECT_DIR$/src/datastructure/datastructurestudy.groovy" />
+        <option value="$PROJECT_DIR$/src/datastruct/datastructurestudy.groovy" />
+        <option value="$PROJECT_DIR$/src/datastruct/mapstructstudy.groovy" />
+        <option value="$PROJECT_DIR$/src/datastruct/rangestudy.groovy" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="76" />
-    <option name="y" value="62" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="339" />
+    <option name="y" value="72" />
     <option name="width" value="1400" />
     <option name="height" value="978" />
   </component>
@@ -111,6 +156,12 @@
               <item name="GroovySpecification" type="b2602c69:ProjectViewProjectNode" />
               <item name="GroovySpecification" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="datastruct" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroovySpecification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroovySpecification" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="variable" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -133,7 +184,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Groovy.clouserstudy">
+  <component name="RunManager" selected="Groovy.rangestudy">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -223,12 +274,28 @@
       <setting name="workDir" value="file://$PROJECT_DIR$/src/variable" />
       <setting name="debug" value="false" />
     </configuration>
-    <configuration name="stringstudy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="datastructurestudy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="GroovySpecification" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/variable/stringstudy.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/datastruct/datastructurestudy.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/variable" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/datastruct" />
+      <setting name="debug" value="false" />
+    </configuration>
+    <configuration name="mapstructstudy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="GroovySpecification" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/datastruct/mapstructstudy.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/datastruct" />
+      <setting name="debug" value="false" />
+    </configuration>
+    <configuration name="rangestudy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="GroovySpecification" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/datastruct/rangestudy.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/datastruct" />
       <setting name="debug" value="false" />
     </configuration>
     <configuration name="structstudy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
@@ -239,26 +306,20 @@
       <setting name="workDir" value="file://$PROJECT_DIR$/src/variable" />
       <setting name="debug" value="false" />
     </configuration>
-    <configuration name="variablestudy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="GroovySpecification" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/variable/variablestudy.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/variable" />
-      <setting name="debug" value="false" />
-    </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Groovy.variablestudy" />
-      <item index="1" class="java.lang.String" itemvalue="Groovy.stringstudy" />
-      <item index="2" class="java.lang.String" itemvalue="Groovy.structstudy" />
-      <item index="3" class="java.lang.String" itemvalue="Groovy.clouserstudy" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Groovy.structstudy" />
+      <item index="1" class="java.lang.String" itemvalue="Groovy.clouserstudy" />
+      <item index="2" class="java.lang.String" itemvalue="Groovy.datastructurestudy" />
+      <item index="3" class="java.lang.String" itemvalue="Groovy.mapstructstudy" />
+      <item index="4" class="java.lang.String" itemvalue="Groovy.rangestudy" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Groovy.clouserstudy" />
-        <item index="1" class="java.lang.String" itemvalue="Groovy.structstudy" />
-        <item index="2" class="java.lang.String" itemvalue="Groovy.stringstudy" />
-        <item index="3" class="java.lang.String" itemvalue="Groovy.variablestudy" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Groovy.rangestudy" />
+        <item index="1" class="java.lang.String" itemvalue="Groovy.mapstructstudy" />
+        <item index="2" class="java.lang.String" itemvalue="Groovy.datastructurestudy" />
+        <item index="3" class="java.lang.String" itemvalue="Groovy.clouserstudy" />
+        <item index="4" class="java.lang.String" itemvalue="Groovy.structstudy" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +337,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="76" y="62" width="1400" height="978" extended-state="0" />
+    <frame x="339" y="72" width="1400" height="978" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -284,9 +345,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.50289017" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.50578034" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32947975" sideWeight="0.49710983" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29964328" sideWeight="0.49421966" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -363,7 +424,7 @@
     <entry file="file://$PROJECT_DIR$/src/variable/stringstudy.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1161">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -408,14 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="1278" column="80" lean-forward="false" selection-start-line="1278" selection-start-column="71" selection-end-line="1278" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-67">
@@ -437,7 +490,7 @@
     <entry file="file://$PROJECT_DIR$/src/variable/clouserstudy.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
-          <caret line="139" column="1" lean-forward="true" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
+          <caret line="139" column="1" lean-forward="false" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
           <folding>
             <element signature="e#151#211#0" expanded="false" />
             <element signature="e#267#288#0" expanded="false" />
@@ -445,6 +498,54 @@
             <element signature="n#!!block;n#fab2#0" expanded="false" />
             <element signature="n#!!block;n#fab3#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="108" column="17" lean-forward="false" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="599" column="6" lean-forward="false" selection-start-line="599" selection-start-column="6" selection-end-line="599" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastruct/datastructurestudy.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="2066" column="46" lean-forward="false" selection-start-line="2066" selection-start-column="46" selection-end-line="2066" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastruct/mapstructstudy.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastruct/rangestudy.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
