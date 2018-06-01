@@ -12,12 +12,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="stringstudy.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stringstudy.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/variable/stringstudy.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1161">
               <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clouserstudy.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/variable/clouserstudy.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="139" column="1" lean-forward="true" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
+              <folding>
+                <element signature="e#151#211#0" expanded="false" />
+                <element signature="e#267#288#0" expanded="false" />
+                <element signature="n#!!block;n#fab#0" expanded="false" />
+                <element signature="n#!!block;n#fab2#0" expanded="false" />
+                <element signature="n#!!block;n#fab3#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,12 +57,13 @@
         <option value="C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class" />
         <option value="$PROJECT_DIR$/src/variable/stringstudy.groovy" />
         <option value="$PROJECT_DIR$/src/variable/structstudy.groovy" />
+        <option value="$PROJECT_DIR$/src/variable/clouserstudy.groovy" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="84" />
-    <option name="y" value="115" />
+    <option name="x" value="76" />
+    <option name="y" value="62" />
     <option name="width" value="1400" />
     <option name="height" value="978" />
   </component>
@@ -88,22 +105,13 @@
             <path>
               <item name="GroovySpecification" type="b2602c69:ProjectViewProjectNode" />
               <item name="GroovySpecification" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="GroovySpecification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroovySpecification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroovySpecification" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="GroovySpecification" type="462c0819:PsiDirectoryNode" />
-              <item name="variable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GroovySpecification" type="b2602c69:ProjectViewProjectNode" />
               <item name="GroovySpecification" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="variable" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -125,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Groovy.structstudy">
+  <component name="RunManager" selected="Groovy.clouserstudy">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -207,6 +215,14 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="clouserstudy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="GroovySpecification" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/variable/clouserstudy.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/variable" />
+      <setting name="debug" value="false" />
+    </configuration>
     <configuration name="stringstudy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="GroovySpecification" />
       <setting name="path" value="file://$PROJECT_DIR$/src/variable/stringstudy.groovy" />
@@ -231,16 +247,18 @@
       <setting name="workDir" value="file://$PROJECT_DIR$/src/variable" />
       <setting name="debug" value="false" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Groovy.variablestudy" />
       <item index="1" class="java.lang.String" itemvalue="Groovy.stringstudy" />
       <item index="2" class="java.lang.String" itemvalue="Groovy.structstudy" />
+      <item index="3" class="java.lang.String" itemvalue="Groovy.clouserstudy" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Groovy.structstudy" />
-        <item index="1" class="java.lang.String" itemvalue="Groovy.stringstudy" />
-        <item index="2" class="java.lang.String" itemvalue="Groovy.variablestudy" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Groovy.clouserstudy" />
+        <item index="1" class="java.lang.String" itemvalue="Groovy.structstudy" />
+        <item index="2" class="java.lang.String" itemvalue="Groovy.stringstudy" />
+        <item index="3" class="java.lang.String" itemvalue="Groovy.variablestudy" />
       </list>
     </recent_temporary>
   </component>
@@ -258,8 +276,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="84" y="115" width="1400" height="978" extended-state="0" />
-    <editor active="true" />
+    <frame x="76" y="62" width="1400" height="978" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -274,7 +291,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -304,16 +321,8 @@
         <state relative-caret-position="611">
           <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/org/codehaus/groovy/runtime/StringGroovyMethods.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="138" column="25" lean-forward="false" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -325,26 +334,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="915" column="26" lean-forward="false" selection-start-line="915" selection-start-column="26" selection-end-line="915" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/variable/structstudy.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/groovy/lang/Script.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -372,6 +365,86 @@
         <state relative-caret-position="1161">
           <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/groovy/lang/Closure.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="210" column="13" lean-forward="false" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/groovy/lang/Script.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="89" column="16" lean-forward="false" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/org/codehaus/groovy/runtime/callsite/BooleanClosureWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/org/codehaus/groovy/runtime/StringGroovyMethods.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="852" column="26" lean-forward="false" selection-start-line="852" selection-start-column="26" selection-end-line="852" selection-end-column="26" />
+          <folding>
+            <element signature="e#28707#28708#0" expanded="true" />
+            <element signature="e#28748#28749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/groovy-2.4.13/lib/groovy-2.4.13.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="1278" column="80" lean-forward="false" selection-start-line="1278" selection-start-column="71" selection-end-line="1278" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="4559" column="44" lean-forward="false" selection-start-line="4559" selection-start-column="44" selection-end-line="4559" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/GroovySpecification/variable/clouserstudy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2754">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/variable/clouserstudy.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="139" column="1" lean-forward="true" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
+          <folding>
+            <element signature="e#151#211#0" expanded="false" />
+            <element signature="e#267#288#0" expanded="false" />
+            <element signature="n#!!block;n#fab#0" expanded="false" />
+            <element signature="n#!!block;n#fab2#0" expanded="false" />
+            <element signature="n#!!block;n#fab3#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
