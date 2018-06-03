@@ -3,7 +3,7 @@ package objectorention
 /**
  * 1.groovy中默认都是public
  */
-class Person implements DefualtAction {
+class Person implements  Serializable  {
 
     String name
 
@@ -30,10 +30,7 @@ class Person implements DefualtAction {
         return "the method ${name} is missing"
     }
 
-    @Override
-    void eat() {
 
-    }
 
 }
 
