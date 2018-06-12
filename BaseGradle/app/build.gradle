@@ -1,15 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
     defaultConfig {
-        applicationId "com.phj.gradle"
-        minSdkVersion 19
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled rootProject.ext.android.multiDexEnabled //突破应用方法数65535的一个限制
+        manifestPlaceholders = rootProject.ext.android.manifestPlaceholders
     }
     buildTypes {
         release {
@@ -19,12 +21,40 @@ android {
     }
 }
 
+allprojects{
+
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile rootProject.ext.dependence.libSupportV7
+    compile rootProject.ext.dependence.libSupportMultidex
     testCompile 'junit:junit:4.12'
     compile project(':Test')
+}
+
+/**
+ *  文件拷贝
+ */
+// copy {
+//     from files('proguard-rules.pro','app.iml')
+//     into('../gradle')
+//     exclude('*.pro')
+// }
+
+//copy {
+//    from file('build/outputs/apk/')
+//    into getRootProject().getBuildDir().path+'/apk/'
+//}
+
+/**
+ *  对文件树进行遍历
+ */
+fileTree('build/') { FileTree fileTree ->
+    fileTree.visit { FileTreeElement element->
+        println element.file.name
+    }
 }

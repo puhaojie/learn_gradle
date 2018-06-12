@@ -1,5 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-apply from : this.file('common.gradle')
+apply from: this.file('common.gradle')
 buildscript {
     repositories {
         jcenter()
@@ -31,39 +31,39 @@ task clean(type: Delete) {
  *  初始化阶段和配置阶段之间的监听
  */
 this.beforeEvaluate {
-    println  'beforeEvaluate'
+    println 'beforeEvaluate'
 }
 
 /**
  * 配置阶段之后，执行阶段之前
  */
-this.afterEvaluate{
-    println  'afterEvaluate'
+this.afterEvaluate {
+    println 'afterEvaluate'
 }
 
 /**
  * 执行结束
  */
 this.gradle.buildFinished {
-    println  'buildFinished'
+    println 'buildFinished'
 }
 
 // 这句话就是执行一条名为tasks的build
 // gradlew build
 
 /****************************************************************
-                  project相关的api
+ project相关的api
  *****************************************************************/
 // 获取所有的project
-def getProjects(){
+def getProjects() {
     println '----------------'
     println 'root projects'
     println '----------------'
     getAllprojects().eachWithIndex { Project project, int i ->
-        if (i==0)
-            println 'root project : '+project.name
+        if (i == 0)
+            println 'root project : ' + project.name
         else {
-            println '+++++++  sub project : '+project.name
+            println '+++++++  sub project : ' + project.name
         }
     }
 }
@@ -73,8 +73,105 @@ def getProjects(){
 /**
  * 获取root Project
  */
-def getRootProject(){
-    def name = this.getRootProject().name
-    println 'name : '+name
+//def getRootProject(){
+//    def name = this.getRootProject().name
+//    println 'name : '+name
+//}
+
+/**
+ *  指定一个project，并对其操作
+ *  Project project(String path, Closure configureClosure);
+ */
+project('app') { Project project ->
+    apply plugin: 'com.android.application'
+
+    dependencies {
+    }
+    android {
+    }
 }
+
+project('Test') { Project project ->
+    apply plugin: 'com.android.library'
+
+}
+
+/**
+ *  为当前的project和它的子project进行配置
+ *  void allprojects(Closure configureClosure);
+ */
+allprojects{ Project project ->
+    group 'com.phj'
+    version '1.0.0'
+}
+
+//println project('Test').group
+// 为子project配置，添加到maven仓库
+subprojects{ Project project ->
+    if (project.plugins.hasPlugin('com.android.library')){
+        apply from : '../publishToMaven.gradle'
+    }
+}
+
+/**************************************************
+ *         project属性相关API
+ **************************************************/
+// Project存在的属性
+/**
+String DEFAULT_BUILD_FILE = "build.gradle";
+String PATH_SEPARATOR = ":"; 路径分隔符
+String DEFAULT_BUILD_DIR_NAME = "build"; 默认输出文件夹
+String GRADLE_PROPERTIES = "gradle.properties";
+
+String SYSTEM_PROP_PREFIX = "systemProp";
+String DEFAULT_VERSION = "unspecified";
+String DEFAULT_STATUS = "release";
+ */
+
+// 扩展属性
+/**
+ * 第一种方式
+ */
+// 如common.gradle中 ext+闭包的方式
+// 在rootProject中定义扩展属性，而不在其它的Project，
+// 这样每个project就可以引用RootProject中的扩展属性了
+/**
+ * 第二种方式
+ */
+// 在gradle.properties中定义键值对
+// 使用： if (hasProperty('isLoadTest').toBoolean())
+
+/****************************************
+ *      file相关API（对文件进行操作）
+ * (1) 路径获取相关api:getRootDir,getProjectDir,创建文件的时候用到
+ * (2) 文件定位、文件拷贝、文件树定位
+ ***************************************/
+//println 'RootDir : '+getRootDir().absolutePath
+//println 'BuildDir : '+getBuildDir().absolutePath
+//println 'ProjectDir : '+getProjectDir().absolutePath
+
+/**
+ * 定位文件
+ * file方法，只需要传入相对路径即可
+ * 从当前的project开始寻找
+ */
+def getContent(String path){
+    try{
+        def file = file(path)
+        return file.text
+    } catch (GradleException e){
+        e.printStackTrace()
+        println 'file not found'
+    }
+    return null
+}
+
+//println getContent('common.gradle')
+
+
+
+
+
+
+
 

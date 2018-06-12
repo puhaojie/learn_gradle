@@ -4,13 +4,13 @@ ext {
 
   android = [compileSdkVersion   : 25,
              buildToolsVersion   : '25.0.0',
-             applicationId       : 'com.youdu',
+             applicationId       : 'com.phj.gradle',
              minSdkVersion       : 16,
              targetSdkVersion    : 23,
              versionCode         : 1,
              versionName         : '1.0.0',
              multiDexEnabled     : true,
-             manifestPlaceholders: [UMENG_CHANNEL_VALUE: 'imooc']]
+             manifestPlaceholders: [UMENG_CHANNEL_VALUE: 'phj']]
 
   signConfigs = ['storeFile'    : 'youdo.jks',
                  'storePassword': 'rzq123456',
@@ -24,13 +24,13 @@ ext {
                 'libSupportMultidex'     : 'com.android.support:multidex:1.0.1',
                 'libCommonLibrary'       : ':vuandroidadsdk',
                 'libPullAlive'           : ':lib_pullalive',
-                'libCircleImageView'     : 'de.hdodenhof:circleimageview:2.1.0',
+                'libCircleImageView'     : 'de.hdodenhof:circleimageview:publishToMaven.1.0',
                 'libSystembarTint'       : 'com.readystatesoftware.systembartint:systembartint:1.0.3',
                 'libUmengAnalytics'      : 'com.umeng.analytics:analytics:latest.integration',
                 'libUniversalImageLoader': 'com.nostra13.universalimageloader:universal-image-loader:1.9.5',
                 'libOkhttp'              : 'com.squareup.okhttp3:okhttp:3.3.0',
-                'libAutoScrollViewPager' : 'cn.trinea.android.view.autoscrollviewpager:android-auto-scroll-view-pager:1.1.2',
-                'libSlidableActivity'    : 'com.r0adkll:slidableactivity:2.0.5',
+                'libAutoScrollViewPager' : 'cn.trinea.android.view.autoscrollviewpager:android-auto-scroll-view-pager:1.1.publishToMaven',
+                'libSlidableActivity'    : 'com.r0adkll:slidableactivity:publishToMaven.0.5',
                 'libAndfix'              : 'com.alipay.euler:andfix:0.5.0@aar',
                 'libLogger'              : 'com.orhanobut:logger:+',
                 'libTinker'              : "com.tencent.tinker:tinker-android-lib:1.7.7",

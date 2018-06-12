@@ -1,1 +1,3 @@
-include ':app', ':Test'
+include ':app'
+if (hasProperty('isLoadTest').toBoolean())
+    include ':Test'
