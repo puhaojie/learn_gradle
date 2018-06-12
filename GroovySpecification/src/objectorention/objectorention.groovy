@@ -8,7 +8,7 @@ Person.metaClass.sex = 'male'
 def person = new Person(name: 'Qndroid', age: 26)
 println person.sex
 person.sex = 'female'
-println "the new sex is:" + person.sex
+println "the new sex is: ${person.sex}"
 /**
  * 为类动态的添加方法
  */

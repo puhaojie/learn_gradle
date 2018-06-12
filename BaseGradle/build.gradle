@@ -1,0 +1,80 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from : this.file('common.gradle')
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+/**
+ *  监听gradle的生命周期
+ *  初始化阶段构建project对象-->配置阶段解析project对象产生task拓扑图 -->执行阶段执行task
+ */
+
+/**
+ *  初始化阶段和配置阶段之间的监听
+ */
+this.beforeEvaluate {
+    println  'beforeEvaluate'
+}
+
+/**
+ * 配置阶段之后，执行阶段之前
+ */
+this.afterEvaluate{
+    println  'afterEvaluate'
+}
+
+/**
+ * 执行结束
+ */
+this.gradle.buildFinished {
+    println  'buildFinished'
+}
+
+// 这句话就是执行一条名为tasks的build
+// gradlew build
+
+/****************************************************************
+                  project相关的api
+ *****************************************************************/
+// 获取所有的project
+def getProjects(){
+    println '----------------'
+    println 'root projects'
+    println '----------------'
+    getAllprojects().eachWithIndex { Project project, int i ->
+        if (i==0)
+            println 'root project : '+project.name
+        else {
+            println '+++++++  sub project : '+project.name
+        }
+    }
+}
+// 获取所有的子project
+// getSubprojects()
+
+/**
+ * 获取root Project
+ */
+def getRootProject(){
+    def name = this.getRootProject().name
+    println 'name : '+name
+}
+
