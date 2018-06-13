@@ -1,14 +1,44 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 apply from: this.file('common.gradle')
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+/**
+ * void buildscript(Closure configureClosure);
+ * @param configureClosure the closure to use to configure the build script classpath.
+ */
+buildscript { ScriptHandler scriptHandler ->
+    //    void repositories(Closure configureClosure);
+    // 工程仓库地址
+    scriptHandler.repositories { RepositoryHandler repositories->
+        repositories.jcenter()
+        repositories.mavenLocal()
+        repositories.mavenCentral()
+        // 私有的maven仓库
+        repositories.maven(){MavenArtifactRepository repository->
+            repository.name 'personal-phj'
+            repository.url 'http://localhost:8081:/nex'
+
+            repository.credentials{ // 仓库用户名密码
+                username = 'joe'
+                password = 'secret'
+            }
+        }
+        repositories.maven(){MavenArtifactRepository repository->
+            repository.name 'phj'
+            repository.url 'http://localhost:8081:/phj'
+
+            repository.credentials{ // 仓库用户名密码
+                username = 'joe'
+                password = 'secret'
+            }
+        }
+    }
+
+    //    void dependencies(Closure configureClosure);
+    // 工程中 插件 的依赖地址
+    scriptHandler.dependencies { DependencyHandler dependencyHandler ->
+
+        dependencyHandler.classpath 'com.android.tools.build:gradle:2.2.3'
+
     }
 }
 
@@ -168,10 +198,34 @@ def getContent(String path){
 
 //println getContent('common.gradle')
 
+/**************************************************
+ *         project其他API
+ **************************************************/
+
+// 依赖相关API
 
 
+/********************
+ * gradle 执行外部命令
+ *******************/
+task(name: 'apkcopy') {
+
+    doLast{
+        def sourcePath = this.buildDir.path + '/generated'
+        def desationPath = 'F:\\GitHub\\learn_gradle\\a'
+        def command = "mv -f ${sourcePath} ${desationPath}"
+        exec {
+            try {
+                executable 'bash'
+                args '-c', command
+                println 'the command success'
+            } catch (GradleException e) {
+                println 'the command error'
+            }
+        }
+    }
 
 
-
+}
 
 

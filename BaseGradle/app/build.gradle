@@ -25,15 +25,24 @@ allprojects{
 
 }
 
-dependencies {
+// 为应用程序添加依赖
+dependencies { DependencyHandler dependencyHandler  ->
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support' // 排除依赖
+        exclude module: 'support-annotations'
     })
-    compile rootProject.ext.dependence.libSupportV7
-    compile rootProject.ext.dependence.libSupportMultidex
-    testCompile 'junit:junit:4.12'
-    compile project(':Test')
+    compile(rootProject.ext.dependence.libOkhttp) {
+//        exclude module: 'support-v4' //排除依赖
+        transitive false //禁止传递依赖
+    }
+    dependencyHandler.compile rootProject.ext.dependence.libSupportV7
+    dependencyHandler.compile rootProject.ext.dependence.libSupportMultidex
+    dependencyHandler.testCompile 'junit:junit:4.12'
+    dependencyHandler.compile project(':Test')
+
+    // 编译的时候会加载，运行的时候是没有的（主工程和库工程同时引用，可以在库工程中使用）
+//    provided(rootProject.ext.dependence.libAndfix)
 }
 
 /**
@@ -58,3 +67,6 @@ fileTree('build/') { FileTree fileTree ->
         println element.file.name
     }
 }
+
+
+
