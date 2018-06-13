@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+import groovy.xml.MarkupBuilder
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -98,10 +98,239 @@ dependencies { DependencyHandler dependencyHandler  ->
  * 执行cmd下面的gradle -v
  */
 String cmd = 'gradle.bat -v'
-task hello(){
+task hello(group:'phj',description:'创建task'){
     println "hello start"
     def cmdResult = cmd.execute().text.trim()
     println cmdResult
     println "hello end"
 }
+
+/*********************************************
+ *             Task api详解
+ ********************************************/
+// 通过TaskContainer（tasks）来管理所有的task
+// task在配置阶段就会执行，执行阶段只能是task执行
+this.tasks.create(name : 'helloTask',dependsOn: 'hello')<<{
+    setGroup('phj')
+    setDescription('描述')
+    println 'helloTask'
+}
+
+/**
+ *  配置task在执行阶段
+ *  doFirst ： 执行阶段之前
+ *  << 相当于 doLast ：执行阶段之后
+ */
+
+/**
+ * 计算build时长
+ */
+//def startTime ,endTime
+
+//afterEvaluate{
+//    getTasks().findByName('preBuild').doFirst{
+//        startTime = System.currentTimeMillis()
+//        println '开始时间--'+startTime
+//    }
+//    getTasks().findByName('build').doLast{
+//        endTime = System.currentTimeMillis()
+//        println 'task结束时间--'+(endTime - startTime)
+//    }
+//}
+
+/***************************************
+ *           Task指定顺序
+ *  1、通过dependsOn
+ *  2、通过输入输出
+ *  3、通过API指定顺序
+ **************************************/
+
+// 通过dependsOn
+//task task2(group:'phj',dependsOn: [helloTask])<<{
+//    println 'task2'
+//}
+
+// 通过输入输出
+task lib1(group:'phj') << {
+    println 'lib1'
+}
+
+task lib2(group:'phj') << {
+    println 'lib1'
+}
+
+task noLib(group:'phj') << {
+    println 'noLib'
+}
+
+task task3 {
+    dependsOn getTasks().findAll {task->
+        return task.name.startsWith('lib')
+    }
+    doLast{
+        println 'task3'
+    }
+
+}
+
+/**
+ *  解析xml文件
+ */
+task handleReleaseFile {
+    def srcFile = file('releases.xml')
+    def destDir = new File(this.buildDir, 'generated/release/')
+    doLast {
+        println '开始解析对应的xml文件...'
+        if(!destDir.exists())
+             destDir.mkdir()
+        def releases = new XmlParser().parse(srcFile)
+        releases.release.each { releaseNode ->
+            //解析每个release结点的内容
+            def name = releaseNode.versionName.text()
+            def versionCode = releaseNode.versionCode.text()
+            def versionInfo = releaseNode.versionInfo.text()
+            //创建文件并写入结点数据
+            def destFile = new File(destDir, "release-${name}.txt")
+            destFile.withWriter('utf-8') { writer -> writer.write("${name} -> ${versionCode} -> ${versionInfo}")
+            }
+        }
+    }
+}
+
+
+task handleReleaseTest(dependsOn:'handleReleaseFile'){
+    def dir = fileTree(this.buildDir.path + 'generated/release/')
+    doLast {
+        dir.each {
+            println 'the file name is:' + it
+        }
+        println '输出完成...'
+    }
+}
+
+/**
+ * task输入输出
+ * inputs 和 outputs是task两个属性
+ */
+
+ext {
+    versionName = rootProject.ext.android.versionName
+    versionCode = rootProject.ext.android.versionCode
+    versionInfo = 'App的第3个版本，上线了一些最基础核心的功能.'
+    destFile = file('releases.xml')
+    if (destFile != null && !destFile.exists()) {
+        destFile.createNewFile()
+    }
+}
+
+class VersionMsg {
+    String versionCode
+    String versionName
+    String versionInfo
+}
+
+task writeTask{
+    inputs.property('versionCode', this.ext.versionCode)
+    inputs.property('versionName', this.ext.versionName)
+    inputs.property('versionInfo', this.ext.versionInfo)
+    outputs.file this.ext.destFile
+    doLast {
+        //将输入的内容写入到输出文件中去
+        def data = inputs.getProperties()
+        File file = outputs.getFiles().getSingleFile()
+        def versionMsg = new VersionMsg(data)
+        //将实体对象写入到xml文件中
+        def sw = new StringWriter()
+        def xmlBuilder = new MarkupBuilder(sw)
+        if (file.text != null && file.text.size() <= 0) {
+            //没有内容
+            xmlBuilder.releases {
+                release {
+                    versionCode(versionMsg.versionCode)
+                    versionName(versionMsg.versionName)
+                    versionInfo(versionMsg.versionInfo)
+                }
+            }
+            //直接写入
+            file.withWriter('utf-8'){Writer writer->
+                writer.append(sw.toString())
+            }
+        } else {
+            //已有其它版本内容
+            xmlBuilder.release {
+                versionCode(versionMsg.versionCode)
+                versionName(versionMsg.versionName)
+                versionInfo(versionMsg.versionInfo)
+            }
+            //插入到最后一行前面
+            def lines = file.readLines()
+            def lengths = lines.size() - 1
+            // 插入在最后一行之前
+            file.withWriter('utf-8') { writer ->
+                lines.eachWithIndex { line, index ->
+                    if (index != lengths) {
+                        writer.append(line + '\r\n')
+                    } else if (index == lengths) {
+                        writer.append('\r\r\n' + sw.toString() + '\r\n')
+                        writer.append(lines.get(lengths))
+                    }
+                }
+            }
+        }
+    }
+}
+
+task readTask {
+    //指定输入文件为上一个task的输出
+    inputs.file this.destFile
+    doLast {
+        //读取输入文件的内容并显示
+        def file = inputs.files.singleFile
+        println file.text
+    }
+}
+
+task taskZ {
+    dependsOn writeTask, readTask
+    doLast {
+        println '输入输出任务结束'
+    }
+}
+
+/**
+ *  指定API方式
+ */
+task taskA(group:'phj') {
+    mustRunAfter lib1,lib2
+}
+
+
+this.afterEvaluate{
+    def buildTask = getTasks().findByName('build')
+    if (buildTask != null){
+        buildTask.doLast{
+            println '开始执行'
+            writeTask.execute()
+        }
+    }
+}
+
+android.applicationVariants.all { variant ->
+
+    def variantOutput = variant.outputs.first()
+    def variantName = variant.name.capitalize()
+    def variantData = variant.variantData
+    println '变体：'+variantName
+}
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,14 @@
+<releases>
+  <release>
+    <versionCode>1</versionCode>
+    <versionName>1.0.1</versionName>
+    <versionInfo>App的第3个版本，上线了一些最基础核心的功能.</versionInfo>
+  </release>
+
+
+<release>
+  <versionCode>2</versionCode>
+  <versionName>1.0.2</versionName>
+  <versionInfo>App的第3个版本，上线了一些最基础核心的功能.</versionInfo>
+</release>
+</releases>
