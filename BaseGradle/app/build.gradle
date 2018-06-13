@@ -62,11 +62,46 @@ dependencies { DependencyHandler dependencyHandler  ->
 /**
  *  对文件树进行遍历
  */
-fileTree('build/') { FileTree fileTree ->
-    fileTree.visit { FileTreeElement element->
-        println element.file.name
-    }
+//fileTree('build/') { FileTree fileTree ->
+//    fileTree.visit { FileTreeElement element->
+//        println element.file.name
+//    }
+//}
+
+/********************
+ * gradle 执行外部命令
+ *******************/
+// mac下操作bash
+//task apkcopy(type: Exec)  {
+//
+//    doLast{
+//        def sourcePath = this.buildDir.path + '/build/outputs/apk'
+//        def desationPath = 'F:/GitHub/a/'
+//        workingDir mWorkingDirRoot
+//
+//        exec {
+//            try {
+////                executable 'bash'
+////                args '-c', command
+//                println 'the command success'
+//            } catch (GradleException e) {
+//                e.printStackTrace()
+//                println 'the command error'
+//            }
+//        }
+//    }
+//
+//
+//}
+
+/**
+ * 执行cmd下面的gradle -v
+ */
+String cmd = 'gradle.bat -v'
+task hello(){
+    println "hello start"
+    def cmdResult = cmd.execute().text.trim()
+    println cmdResult
+    println "hello end"
 }
-
-
 

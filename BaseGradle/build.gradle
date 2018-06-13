@@ -205,27 +205,6 @@ def getContent(String path){
 // 依赖相关API
 
 
-/********************
- * gradle 执行外部命令
- *******************/
-task(name: 'apkcopy') {
 
-    doLast{
-        def sourcePath = this.buildDir.path + '/generated'
-        def desationPath = 'F:\\GitHub\\learn_gradle\\a'
-        def command = "mv -f ${sourcePath} ${desationPath}"
-        exec {
-            try {
-                executable 'bash'
-                args '-c', command
-                println 'the command success'
-            } catch (GradleException e) {
-                println 'the command error'
-            }
-        }
-    }
-
-
-}
 
 
